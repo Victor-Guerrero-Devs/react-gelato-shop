@@ -1,14 +1,12 @@
 import gelatoData from "./data";
-import Gelato from "./components/Gelato";
+import Header from "./components/Header/Header";
+import Menu from "./components/Menu/Menu";
 const App = () => {
-  const renderedGelatos = gelatoData.map((gelato) => (
-    <Gelato key={gelato.name} {...gelato} />
-  ));
   return (
-    <>
-      <h1>Gelato Shop</h1>
-      {renderedGelatos}
-    </>
+    <div className="container">
+      <Header />
+      <Menu />
+    </div>
   );
 };
 

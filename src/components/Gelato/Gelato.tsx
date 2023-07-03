@@ -1,3 +1,5 @@
+import styles from "./Gelato.module.css";
+
 type GelatoProps = {
   name: string;
   ingredients: string;
@@ -14,13 +16,15 @@ const Gelato = ({
   soldOut,
 }: GelatoProps) => {
   return (
-    <div>
+    <li className={styles.gelato}>
       <img src={photoName} alt={name} />
-      <h3>{name}</h3>
-      <p>{ingredients}</p>
-      <p>${price}</p>
-      {soldOut ? <p>Sorry, sold out</p> : <p>IN STOCK</p>}
-    </div>
+      <div>
+        <h3>{name}</h3>
+        <p>{ingredients}</p>
+        <p>${price}</p>
+        {soldOut ? <p>Sorry, sold out</p> : <p>IN STOCK</p>}
+      </div>
+    </li>
   );
 };
 
