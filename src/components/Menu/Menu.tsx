@@ -9,7 +9,7 @@ const Menu = () => {
   return (
     <main className={styles.menu}>
       <h2>Our Menu</h2>
-      <ul className="gelatos">{renderedGelatos}</ul>
+      <ul className={styles.gelatos}>{renderedGelatos}</ul>
     </main>
   );
 };
